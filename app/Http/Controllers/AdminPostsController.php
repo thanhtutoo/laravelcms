@@ -34,10 +34,10 @@ class AdminPostsController extends Controller
     {
         //
 
+        $categories = Category::lists('name','id')->all();
 
 
-
-        return view('admin.posts.create');
+        return view('admin.posts.create', compact('categories'));
     }
 
     /**

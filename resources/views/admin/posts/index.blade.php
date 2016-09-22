@@ -15,8 +15,7 @@
             <th>Category</th>
             <th>Title</th>
             <th>body</th>
-            <th>Post link</th>
-            <th>Comments</th>
+
             <th>Created at</th>
             <th>Update</th>
         </thead>
@@ -31,10 +30,8 @@
                     <td>{{$post->id}}</td>
                     <td><img height="50" src="{{$post->photo ? $post->photo->file : 'http://placehold.it/400x400' }} " alt=""></td>
                     <td><a href="{{route('admin.posts.edit', $post->id)}}">{{$post->user->name}}</a></td>
-                    <td>{{$post->user_id}}</td>
-                    <td>{{$post->category_id}}</td>
 
-
+                    <td>{{$post->category ? $post->category->name : 'Uncategorized'}}</td>
 
                     <td>{{$post->title}}</td>
                     <td>{{$post->body}}</td>
