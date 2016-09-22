@@ -142,7 +142,7 @@
                             </li>
 
                             <li>
-                                <a href="route('admin.posts.create')">Create Post</a>
+                                <a href="{{route('admin.posts.create')}}">Create Post</a>
                             </li>
 
                         </ul>
